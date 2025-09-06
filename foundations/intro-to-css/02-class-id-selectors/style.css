@@ -1,1 +1,18 @@
-/* Add CSS Styling */
+.odd-number{
+    background-color: hsla(0, 100%, 67%, 0.6);
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+#blue-number{
+    color: hsl(240, 100%, 37%);
+    font-size: 36px;
+}
+
+.bigger{
+    font-size: 24px;
+}
+
+#green-number{
+    background-color: hsla(120, 74%, 75%, 0.847);
+    font-weight: bold;
+}
