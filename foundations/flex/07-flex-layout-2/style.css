@@ -2,28 +2,77 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex; /* OK */
+  flex-direction: column;  /* OK */
 }
+
+/* Added */
+.main-content {
+  display: flex; /* OK */
+  flex: 1; /* OK */
+}
+
+ul {
+  list-style-type: none; /* OK */
+  padding: 0; /* OK */
+  margin: 0; /* OK */
+}
+
+li {
+  margin-bottom: 16px; /* Didn't have this */
+}
+
+a {
+  text-decoration: none; /* OK */
+  color: white; /* OK */
+  font-size: 24px; /* OK */
+}
+
+.card-content {
+  display: flex; /* OK */
+  padding: 48px; /* OK */
+  gap: 32px; /* OK */
+  flex-wrap: wrap; /* OK */
+  /* flex: 1; Not necessary */
+  /* justify-content: center; Not necessary */
+  /* align-items:center; Not necessary */
+  /* align-content: center; Not necessary */
+}
+/* Added */
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px; /* OK */
+  font-weight: 900; /* OK */
+  display: flex; /* OK */
+  align-items: center; /* OK */
+  padding: 0 16px; /* OK */
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex; /* OK */
+  justify-content: center; /* OK */
+  align-items: center; /* OK */
 }
 
 .sidebar {
-  width: 300px;
+  min-width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  flex-shrink: 0;  /* OK */
+  padding: 16px; /* Had this in ul */
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 300px; /* OK */
+  padding: 16px; /* Didn't have this */
+  height: 250px; /* If I don't add height it stretches the cards in 4k monitors */
 }
