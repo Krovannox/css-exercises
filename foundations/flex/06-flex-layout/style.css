@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex; /* OK */
+  flex-direction: column; /* OK */
 }
 
 img {
@@ -16,6 +18,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px; /* Missed this */
 }
 
 input {
@@ -23,4 +26,37 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+  margin-bottom: 12px;
+}
+
+/* Added */
+ul {
+  list-style-type: none; /* OK */
+  /* I had the following in .left-links, .right-links */
+  display: flex;
+  gap: 16px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none; /* OK */
+  color: grey; /* OK */
+}
+
+.header, .footer {
+  display: flex; /* OK */
+  justify-content: space-between; /* OK */
+  padding: 16px; /* Had this in .left-links, .right-links */
+}
+
+.footer {
+  background-color: rgba(211, 211, 211, 0.776); /* OK */
+}
+
+.content {
+  display: flex; /* OK */
+  flex-direction: column; /* OK */
+  align-items: center; /* OK */
+  justify-content: center; /* Had this in body with space-between */
+  flex: 1; /* Didn't had this */
 }
