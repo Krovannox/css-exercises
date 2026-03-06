@@ -6,11 +6,11 @@
 .container {
   text-align: center;
   display: grid;
-  grid-template-areas: 
-    "header   header"
-    "sidebar  nav"
-    "sidebar  article"
-    "footer   footer";
+  grid: 
+    "header   header" 100px
+    "sidebar  nav" 80px
+    "sidebar  article" 1fr
+    "footer   footer" 100px; 
 }
 
 .container div {
@@ -24,11 +24,25 @@
 .header {
   background-color: #393f4d;
   grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.logo {
+  text-align: left;
+  margin-left: 30px;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .sidebar {
