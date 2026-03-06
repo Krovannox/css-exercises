@@ -6,7 +6,7 @@
 .container {
   text-align: center;
   display: grid;
-  grid-template: 100px 80px 1fr 100px / 1fr 4fr; 
+  grid-template: 100px 50px 1fr 100px / 1fr 4fr; 
   gap: 4px;
 }
 
@@ -73,9 +73,15 @@
   grid-area: 2 / 2 / 3 / 3;
 }
 
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style-type: none;
 }
 
 .article {
